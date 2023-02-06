@@ -1,14 +1,18 @@
 class Validaciones:
     def validarPrecios(a):
-        if a[0]=="$":
-            prr = a.split("$")
-            if len(prr)>2:
-                return False
+         for i in a:
+            if i!=" ":
+                if a[0]=="$":
+                    prr = a.split("$")
+                    if len(prr)>2:
+                        return False
+                    else:
+                        objeto.validarDecimales(prr[1])
+                        return True
+                else:
+                    return False
             else:
-                objeto.validarDecimales(prr[1])
-                return True
-        else:
-            return False
+                return False
        
     
     
